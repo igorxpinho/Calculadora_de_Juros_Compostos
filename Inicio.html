@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Juros Compostos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button id="backBtn" class="back-btn">Voltar</button>
+            <h1>Calculadora de Juros Compostos</h1>
+            
+        </div>
+        <hr>
+
+        <!-- Botões para alternar entre os modos -->
+        <div class="mode-selector">
+            <button id="classicModeBtn" class="mode-btn">Simulação Clássica</button>
+            <button id="variableModeBtn" class="mode-btn active">Aportes Variáveis</button>
+        </div>
+
+        <!-- Formulário para Simulação Clássica -->
+        <form id="classicForm" class="calc-form" style="display: none;">
+            <label for="classicInitialValue">Valor Inicial (R$):</label>
+            <input type="text" id="classicInitialValue" placeholder="1.000,00" required>
+
+            <label for="classicMonthlyContribution">Aporte Mensal (R$):</label>
+            <input type="text" id="classicMonthlyContribution" placeholder="500,00">
+
+            <label for="classicInterestRate">Taxa de Juros Anual (%):</label>
+            <input type="text" id="classicInterestRate" placeholder="14,00" required>
+
+            <label for="classicPeriod">Período (em anos):</label>
+            <input type="number" id="classicPeriod" placeholder="30" required>
+
+            <button type="submit" class="calculate-btn">Calcular</button>
+        </form>
+
+        <!-- Formulário para Aportes Variáveis -->
+        <form id="variableForm" class="calc-form">
+            <label for="variableInitialValue">Valor Inicial (R$):</label>
+            <input type="text" id="variableInitialValue" placeholder="1.000,00" required>
+
+            <label for="variableStartDate">Data Inicial (dd/mm/aaaa):</label>
+            <div class="date-input-wrapper">
+                <input type="text" id="variableStartDate" placeholder="01/01/2025" required>
+                <span class="calendar-icon">📅</span>
+            </div>
+
+            <div class="contribution-period">
+                <label for="newPeriodType">Tipo de Aporte:</label>
+                <select id="newPeriodType" disabled>
+                    <option value="recorrente">Recorrente</option>
+                </select>
+
+                <label for="newDuration">Duração do Investimento (em anos):</label>
+                <input type="number" id="newDuration" placeholder="5" min="1">
+
+                <label for="newInterestRate">Taxa de Juros Anual (%):</label>
+                <input type="text" id="newInterestRate" placeholder="14,00">
+
+                <label for="newContribution">Valor Mensal (R$):</label>
+                <input type="text" id="newContribution" placeholder="500,00">
+            </div>
+
+            <button type="button" id="addPeriodBtn" class="add-period-btn">Adicionar Aporte</button>
+
+            <!-- Tabela para exibir períodos adicionados -->
+            <table id="periodsTable" class="periods-table" style="display: none;">
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Data</th>
+                        <th>Valor</th>
+                        <th>Taxa de Juros</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="periodsTableBody"></tbody>
+            </table>
+
+            <div class="action-buttons">
+                <button type="submit" class="calculate-btn">Calcular</button>
+                <button type="button" class="import-btn">Importar Aportes</button>
+            </div>
+        </form>
+
+        <!-- Resultados -->
+        <div id="result" class="result" style="display: none;">
+            <div><h3>Valor total final</h3><p id="totalFinal">R$ 0,00</p></div>
+            <div><h3>Valor total investido</h3><p id="totalInvestido">R$ 0,00</p></div>
+            <div><h3>Total em juros</h3><p id="totalJuros">R$ 0,00</p></div>
+            <div><h3>Renda mensal aposentadoria</h3><p id="rendaMensal">R$ 0,00</p></div>
+        </div>
+
+        <!-- Tabela de Detalhamento -->
+        <table id="detailsTable" class="details-table" style="display: none;">
+            <thead>
+                <tr>
+                    <th>Aporte</th>
+                    <th>Montante Acumulado</th>
+                    <th>Valor Investido</th>
+                    <th>Juros Ganhos</th>
+                </tr>
+            </thead>
+            <tbody id="detailsTableBody"></tbody>
+        </table>
+
+        <!-- Gráfico -->
+        <div id="chartContainer" class="chart-container" style="display: none;">
+            <canvas id="growthChart"></canvas>
+        </div>
+
+        <!-- Botão de Exportação -->
+        <button id="exportBtn" class="export-btn" style="display: none;">Exportar Resultados</button>
+    </div>
+
+    <footer>
+        <p>© 2025 Calculadora de Juros Compostos. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

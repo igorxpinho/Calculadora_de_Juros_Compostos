@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudo Sobre Juros Compostos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Tudo Sobre Juros Compostos</h1>
+        </div>
+        <hr>
+
+        <!-- Seção: O que são Juros Compostos? -->
+        <section class="info-section">
+            <h2>O que são Juros Compostos?</h2>
+            <p>
+                Os juros compostos são conhecidos como "juros sobre juros" e representam uma das ferramentas mais poderosas para o crescimento financeiro a longo prazo. Diferentemente dos juros simples, onde os juros são calculados apenas sobre o valor inicial (principal), os juros compostos são calculados sobre o montante acumulado, ou seja, o principal mais os juros acumulados de períodos anteriores.
+            </p>
+            <p>
+                Esse mecanismo faz com que o crescimento do seu dinheiro seja exponencial, e não linear, o que significa que, com o tempo, os ganhos se tornam cada vez maiores. Albert Einstein teria dito que os juros compostos são a "oitava maravilha do mundo", destacando seu potencial para multiplicar riquezas.
+            </p>
+        </section>
+
+        <!-- Seção: Fórmula dos Juros Compostos -->
+        <section class="info-section">
+            <h2>Fórmula dos Juros Compostos</h2>
+            <p>A fórmula básica dos juros compostos é:</p>
+            <div class="formula">
+                \( M = P \times (1 + i)^n \)
+            </div>
+            <p>Onde:</p>
+            <ul>
+                <li><strong>M</strong>: Montante final (valor total após os juros).</li>
+                <li><strong>P</strong>: Principal (valor inicial investido).</li>
+                <li><strong>i</strong>: Taxa de juros por período (em decimal, por exemplo, 5% = 0,05).</li>
+                <li><strong>n</strong>: Número de períodos (pode ser em anos, meses, etc.).</li>
+            </ul>
+            <p>Se você fizer aportes regulares, como na nossa calculadora, a fórmula se ajusta para incluir os aportes mensais, o que torna o cálculo mais complexo, mas ainda mais poderoso.</p>
+        </section>
+
+        <!-- Seção: Exemplo Prático -->
+        <section class="info-section">
+            <h2>Exemplo Prático</h2>
+            <p>Imagine que você investe R$ 1.000,00 com uma taxa de juros de 10% ao ano, durante 5 anos, sem aportes adicionais. Vamos calcular o montante final:</p>
+            <ul>
+                <li>Principal (P): R$ 1.000,00</li>
+                <li>Taxa de juros (i): 10% ao ano = 0,10</li>
+                <li>Número de períodos (n): 5 anos</li>
+            </ul>
+            <p>Aplicando a fórmula:</p>
+            <div class="formula">
+                \( M = 1.000 \times (1 + 0,10)^5 = 1.000 \times 1,61051 = 1.610,51 \)
+            </div>
+            <p>Resultado: <span id="exampleResult">R$ 1.610,51</span></p>
+        </section>
+
+        <!-- Seção: Juros Compostos com Aportes Mensais -->
+        <section class="info-section">
+            <h2>Juros Compostos com Aportes Mensais</h2>
+            <p>
+                Quando você adiciona aportes regulares, como na nossa calculadora, o efeito dos juros compostos é ainda mais impressionante. Cada aporte mensal não só aumenta o principal, mas também começa a gerar seus próprios juros, criando um ciclo de crescimento exponencial.
+            </p>
+            <p>
+                A fórmula para juros compostos com aportes mensais é:
+            </p>
+            <div class="formula">
+                \( M = P \times (1 + i)^n + C \times \frac{(1 + i)^n - 1}{i} \)
+            </div>
+            <p>Onde:</p>
+            <ul>
+                <li><strong>C</strong>: Valor do aporte mensal.</li>
+                <li><strong>i</strong>: Taxa de juros mensal (taxa anual dividida por 12).</li>
+                <li><strong>n</strong>: Número de meses.</li>
+            </ul>
+            <p>
+                Por exemplo, com um aporte mensal de R$ 500,00 por 30 anos a 14% ao ano (como na calculadora), você pode acumular mais de R$ 2,8 milhões, como vimos!
+            </p>
+        </section>
+
+        <!-- Seção: Aplicações Práticas -->
+        <section class="info-section">
+            <h2>Aplicações Práticas</h2>
+            <p>Os juros compostos têm diversas aplicações no mundo real, especialmente em:</p>
+            <ul>
+                <li><strong>Investimentos a Longo Prazo</strong>: Fundos de investimento, ações, ou renda fixa (como Tesouro Direto) se beneficiam do efeito exponencial dos juros compostos.</li>
+                <li><strong>Planejamento de Aposentadoria</strong>: Construir um patrimônio para a aposentadoria é mais fácil com aportes regulares e o poder dos juros compostos.</li>
+                <li><strong>Empréstimos e Dívidas</strong>: Cuidado! Juros compostos também funcionam contra você em dívidas de cartão de crédito ou empréstimos com taxas altas.</li>
+            </ul>
+            <p>A chave para maximizar os juros compostos é começar cedo, ser consistente com os aportes e escolher investimentos com boas taxas de retorno.</p>
+        </section>
+
+        <!-- Seção: Perguntas Frequentes -->
+        <section class="info-section">
+            <h2>Perguntas Frequentes</h2>
+            <div class="faq">
+                <h3>Qual a diferença entre juros simples e compostos?</h3>
+                <p>
+                    Nos juros simples, os juros são calculados apenas sobre o valor inicial, resultando em um crescimento linear. Nos juros compostos, os juros são calculados sobre o montante acumulado, gerando um crescimento exponencial.
+                </p>
+            </div>
+            <div class="faq">
+                <h3>Como maximizar os benefícios dos juros compostos?</h3>
+                <p>
+                    Comece a investir o mais cedo possível, faça aportes regulares, reinvista os ganhos e escolha investimentos com taxas de retorno consistentes.
+                </p>
+            </div>
+            <div class="faq">
+                <h3>Juros compostos são sempre vantajosos?</h3>
+                <p>
+                    Sim, para investimentos. No entanto, em dívidas (como no cartão de crédito), os juros compostos podem aumentar rapidamente o valor devido, sendo prejudicial.
+                </p>
+                <button id="backToCalculatorBtn" class="back-btn">Ir para Calculadora</button>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 Calculadora de Juros Compostos. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="info-script.js"></script>
+</body>
+</html>
